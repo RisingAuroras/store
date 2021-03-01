@@ -1,0 +1,73 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/mainColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+<!--    <item name="android:statusBarColor">也可以修改statusBar颜色，优先级比PrimaryDark高</item>-->
+    </style>
+    
+    
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+<!--        描述四个动画效果-->
+        <!--打开Activity时，新进入的activity执行的动画（接受一个动画资源文件）-->
+        <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
+        <!--打开Activity时，原Activity执行的动画-->
+        <item name="android:activityOpenExitAnimation">@anim/open_exit</item>
+        <!--退出Activity时，退出的Activity执行动画 -->
+        <item name="android:activityCloseExitAnimation">@anim/close_exit</item>
+        <!--退出Activity时，重新显示的Activity执行动画 -->
+        <item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
+    </style>
+
+<!--    分割线样式-->
+    <style name="line">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/lineColor</item>
+        <item name="android:layout_margin">@dimen/marginSize</item>
+    </style>
+
+<!--    登录按钮-->
+    <style name="commitBtn">
+        <item name="android:layout_height">@dimen/btnHeight</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/titleSize</item>
+        <item name="android:layout_marginLeft">@dimen/marginSize</item>
+        <item name="android:layout_marginRight">@dimen/marginSize</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/btn_commit_select</item>
+    </style>
+
+
+    <style name="MyScrollPage" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--选中状态icon的颜色和字体颜色-->
+        <item name="colorPrimary">@color/colorTheme</item>
+        <item name="colorPrimaryDark">@color/colorTheme</item>
+        <item name="colorAccent">@color/colorTheme</item>
+        <item name="android:windowAnimationStyle">@style/default_animation_down</item>
+    </style>
+
+    <!--只有上一页面退出时有动画-->
+    <style name="default_animation_down" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityCloseEnterAnimation">@anim/activity_down_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_down_out</item>
+    </style>
+
+
+    <!-- 圆形图片 -->
+    <style name="circleImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!--圆形进度条-->
+    <declare-styleable name="RoundProgressView">
+        <attr name="radius" format="dimension"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="strokeColor" format="color"/>
+    </declare-styleable>
+</resources>

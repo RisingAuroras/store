@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--底部播放控制布局-->
+    <LinearLayout
+        android:id="@+id/lay_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_8">
+
+        <!-- logo和播放进度 使用相对布局达成覆盖的效果-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--logo-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:padding="1dp"
+                android:src="@mipmap/icon_music"
+                app:shapeAppearanceOverlay="@style/circleImageStyle"
+                app:strokeColor="@color/white"
+                app:strokeWidth="@dimen/dp_2" />
+            <!--播放进度  自定义View-->
+            <com.example.cloudmusic.views.MusicRoundProgressView
+                android:id="@+id/music_progress"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                app:radius="22dp"
+                app:strokeColor="@color/gold_color"
+                app:strokeWidth="2dp" />
+        </RelativeLayout>
+
+        <!--歌曲名布局-->
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <!--用于左右滑动切换上一曲、下一曲 -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp2_change_song"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- 默认文字 LOGO -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_default_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:singleLine="true"
+                android:text="Good Music"
+                android:textColor="@color/bottom_bg_color"
+                android:textSize="@dimen/sp_16" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/lock_music_pre"
+            android:layout_width="54dp"
+            android:layout_height="@dimen/dp_45"
+            android:src="@drawable/previous_black" />
+        <ImageView
+            android:id="@+id/lock_music_play"
+            android:layout_width="54dp"
+            android:layout_height="@dimen/dp_45"
+            android:src="@drawable/ic_baseline_pause_24" />
+
+        <ImageView
+            android:src="@drawable/next_black"
+            android:id="@+id/lock_music_next"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45" />
+    </LinearLayout>
+</LinearLayout>
