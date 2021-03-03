@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="mainColor">#d43433</color>
+    <color name="mainColorH">#c80f1f</color>
+    <color name="lineColor">#c3c3c3</color>
+    <color name="itemColorH">#dee1e6</color>
+    <color name="titleColor">#333333</color>
+    <color name="infoColor">#888888</color>
+
+    <color name="colorTheme">#ffce3d3a</color>
+
+    <!--页面背景的颜色-->
+    <color name="color_page_bg">#F1F3F4</color>
+    <color name="colorWhite">#ffffffff</color>
+
+    <!--透明色-->
+    <color name="colorTransparent">#00000000</color>
+    <!--半透明-->
+    <color name="colorBanTransparent">#11000000</color>
+    <!--正文文字颜色-->
+    <color name="colorContent">#ff333333</color>
+    <!--侧边栏分割线-->
+    <color name="colorNavLine">#E0E0E0</color>
+
+
+
+    <!--App主要颜色-->
+    <color name="app_color">#26252B</color>
+    <!--App背景颜色-->
+    <color name="app_bg">#333439</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_2">#22FFFFFF</color><!--白色透明度22%-->
+    <color name="white_4">#44FFFFFF</color><!--白色透明度44%-->
+    <color name="white_6">#66FFFFFF</color><!--白色透明度66%-->
+    <color name="white_8">#88FFFFFF</color><!--白色透明度88%-->
+    <color name="transparent">#00000000</color><!--透明-->
+
+    <color name="gold_color">#FF9D00</color>
+    <color name="black">#000000</color>
+
+    <color name="bottom_bg_color">#1A191D</color>
+
+    <color name="line_color">#CBCBCB</color>
+
+    <color name="gray">#E7E7E7</color>
+
+</resources>

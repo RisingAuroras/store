@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.cloudmusic">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- 文件读写权限  Android6.0 以后需要动态获取  10.0之后对文件的处理更复杂了 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+
+    <application
+        android:name=".MyApplication"
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activitys.LocalMusicActivity"></activity>
+        <activity android:name=".test.test" />
+        <receiver android:name=".receiver.NotificationClickReceiver"/>
+
+        <service
+            android:name=".services.MusicService"
+            android:enabled="true"
+            android:exported="true" /> <!-- 项目主页 -->
+        <activity
+            android:name=".activitys.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyScrollPage" /> <!-- 测试界面 -->
+        <activity
+            android:name=".activitys.TestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activitys.PlayMusicActivity" />
+        <activity android:name=".activitys.AlbumListActivity" />
+        <activity android:name=".activitys.ChangePasswordActivity" />
+        <activity android:name=".activitys.MeActivity" />
+        <activity android:name=".activitys.RegisterActivity" />
+        <activity android:name=".activitys.LoginActivity" />
+        <activity android:name=".activitys.WelcomActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activitys.MainActivity" />
+    </application>
+
+</manifest>

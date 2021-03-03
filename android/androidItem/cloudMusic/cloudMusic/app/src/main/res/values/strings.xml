@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">dalidali</string>
+    <string name="nav_text">云音乐</string>
+    <string name="register">立即注册</string>
+    <string name="login">登 录</string>
+    <string name="regist">注 册</string>
+</resources>
